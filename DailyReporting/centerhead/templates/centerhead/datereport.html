@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends 'centerhead/adminhome.html' %}
+
+{%block body_block%}
+<div class="row pt-2">
+    <div class="col-md-2">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="submit" class="btn-sm btn-primary">
+        </form>
+    </div>
+    <div class="col-md-8">
+        {%if datereport%}
+        <table class="table table-light text-primary table-bordered">
+            <tr>
+                <th>Telecaller name</th>
+                <th>Admitted count</th>
+                <th>student name</th>
+            </tr>
+            {%for date in datereport%}
+            <tr>
+                <td>{{date.created_by__email}}</td>
+                <td>{{date.date_count}}</td>
+                <td>{{date.student_name}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        {%endif%}
+    </div>
+</div>
+{%endblock%}

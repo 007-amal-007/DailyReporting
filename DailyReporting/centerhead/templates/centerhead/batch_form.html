@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'centerhead/adminhome.html' %}
+
+{% block body_block %}
+    <div class="row pt-2">
+        <div class="col-md-3">
+            <form action="" method="post">
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="Submit" class="btn-sm btn-primary">
+            </form>
+        </div>
+        <div class="col-md-9">
+            <table class="table table-light text-primary table-bordered">
+                <tr>
+                    <th>Course name</th>
+                    <th>Batch Name</th>
+                    <th>Actions</th>
+                </tr>
+                {%for batch in batches %}
+                <tr>
+                    <td>{{batch.course.course_name}}</td>
+                    <td>{{batch.batch_name}}</td>
+                    <td>
+                        <a href="{%url 'bacthview' batch.id %}"><i class="bi bi-archive"></i></a>
+                        <a href="{%url 'batchupdate' batch.id %}"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="">status</a> 
+                    </td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+    </div>
+{% endblock %}

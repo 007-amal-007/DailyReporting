@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'centerhead/adminhome.html' %}
+
+{% block body_block %}
+    <table class="table table-light text-primary table-bordered mt-2">
+        <tr>
+            <th>employee_mail</th>
+            <th>Phone</th>
+            <th>Role</th>
+        </tr>
+        <tr>
+            <td>{{employee.email}}</td>
+            <td>{{employee.phone}}</td>
+            <td>{{employee.role}}</td>
+        </tr>
+    </table>
+{% endblock %}

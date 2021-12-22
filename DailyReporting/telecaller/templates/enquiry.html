@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'TeleHome.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="Enquiry Add" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{%endblock%}

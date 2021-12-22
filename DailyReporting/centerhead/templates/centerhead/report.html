@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%extends 'centerhead/adminhome.html' %}
+
+{%block body_block%}
+<div class="row pt-2">
+    <div class="col-md-6">
+        <table class="table table-bordered table-light text-warning">
+            <tr class="text-primary">
+                <th>telecaller name</th>
+                <th>enquiries count</th>
+            </tr>
+            {%for report in reports%}
+            <tr>
+                <td>{{report.created_by__email}}</td>
+                <td>{{report.enquiries}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-bordered table-light">
+            <tr class="text-primary">
+                <th>telecaller name</th>
+                <th>admission count</th>
+            </tr>
+            {%for admission in admissions%}
+            <tr class="text-success">
+                <td>{{admission.created_by__email}}</td>
+                <td>{{admission.admission_count}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</div>
+<div class="col-md-12">
+    <table class="table table-bordered table-light text-primary">
+        <tr>
+            <th>email</th>
+            <th>course</th>
+            <th>status</th>
+        </tr>
+        {%for enquiry in enquiries%}
+        {% if enquiry.status == "admitted" %}
+        <tr class="table-success text-success">
+            <td>{{enquiry.created_by}}</td>
+            <td>{{enquiry.course}}</td>
+            <td>{{enquiry.status}}</td>
+        </tr>
+        {% elif enquiry.status == "followup" %}
+        <tr class="table-warning text-warning">
+            <td>{{enquiry.created_by}}</td>
+            <td>{{enquiry.course}}</td>
+            <td>{{enquiry.status}}</td>
+        </tr>
+        {% elif enquiry.status == "not-intrested" %}
+        <tr class="table-danger text-danger">
+            <td>{{enquiry.created_by}}</td>
+            <td>{{enquiry.course}}</td>
+            <td>{{enquiry.status}}</td>
+        </tr>
+        {%endif%}
+        {%endfor%}
+    </table>
+</div>
+{%endblock%}

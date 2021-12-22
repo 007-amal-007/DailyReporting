@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Exo', sans-serif;
+}
+body
+{
+    background-color: rgba(255, 255, 255, 0.788);
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+}
+.no-pad
+{
+  padding: 0!important;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #1f8bc1;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  .sidebar a {
+    font-weight: 600;
+    display: block;
+    color: #9acee7;
+    text-decoration: none;
+    margin: 5px;
+    background-color: rgba(0, 66, 99, 0.3);
+    border-radius: 0.4rem;
+    padding: 5px;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+  }
+  .sidebar .drlogo
+  {
+    background-color: rgba(255, 255, 255, 0.342);
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+    margin: 8px;
+    border-radius: 0.4rem;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .sidebar .drlogo i
+  {
+    color: #1f8bc1;
+    font-size: 28px;
+    font-weight: 100;
+    padding: 5px;
+  }
+  .formSign
+  {
+      margin-top: 100px;
+      background-color: #fff;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.212);
+      border-radius: 0.7rem;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+  }
+  .formSign img
+  {
+      width: auto;
+      height: 300px;
+  }
+  .formSign .teleform
+  {
+      margin-top: 1.9rem;
+  }
+  .formSign .buttonclass
+  {
+      text-align: center;
+  }
+  .formSign .buttonclass .btn-primary
+  {
+      border-radius: 5rem;
+  }
+  .formSign .form-control
+  {
+      border-radius: 1rem;
+      box-shadow: 0 8px 10px rgba(31, 139, 193, 0.212);
+  }
+.TeleNav
+{
+    margin-top: 5px;
+    background-color: rgba(31, 139, 193,0.3);
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+    /* border:1px solid rgba(31, 139, 193,0.9); */
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.TeleNav .teleLog
+{
+  background-color: rgba(31, 139, 193,0.3);
+  border-radius: 5rem;
+  height: 33px;
+  width: 33px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-weight: 900;
+}
+.TeleNav .teleHead
+{
+  color: #1f8bc1;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 3px;
+  background-color: rgba(31, 139, 193,0.3);
+  box-shadow: outset 0 8px 10px rgba(0, 0, 0, 0.068);
+  border-radius: 0.3rem;
+}

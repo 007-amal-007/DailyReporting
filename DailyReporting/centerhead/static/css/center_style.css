@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+  font-family: 'Mulish', sans-serif;
+}
+.bg
+{
+    background-color: rgb(32, 102, 253);
+}
+.no-pad
+{
+  padding: 0!important;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #1f8bc1;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  .sidebar a {
+    font-weight: 600;
+    display: block;
+    color: #9acee7;
+    text-decoration: none;
+    margin: 5px;
+    background-color: rgba(0, 66, 99, 0.3);
+    border-radius: 0.4rem;
+    padding: 5px;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+  }
+  .sidebar .drlogo
+  {
+    background-color: rgba(255, 255, 255, 0.342);
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+    margin: 8px;
+    border-radius: 0.4rem;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .sidebar .drlogo i
+  {
+    color: #1f8bc1;
+    font-size: 28px;
+    font-weight: 100;
+    padding: 5px;
+  }
+  .adminNav
+  {
+    margin-top: 5px;
+    background-color: rgba(31, 139, 193,0.3);
+    /* border:1px solid rgba(31, 139, 193,0.9); */
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding: 10px;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.212);
+    display: flex;
+    justify-content: space-between;
+  }
+  .adminNav .adminHead
+  {
+    color: #1f8bc1;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px;
+    background-color: rgba(31, 139, 193,0.3);
+    box-shadow: outset 0 8px 10px rgba(0, 0, 0, 0.068);
+    border-radius: 0.3rem;
+  }
+  .adminNav .adminUser
+  {
+    color: #1f8bc1;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+  .adminNav .adminNot
+  {
+    background-color: rgba(31, 139, 193,0.3);
+    border-radius: 5rem;
+    width: 50px;
+    padding-top: 3px;
+    padding-left: 5px;
+  }
+  .adminNav .adminLog
+  {
+    background-color: rgba(31, 139, 193,0.3);
+    border-radius: 5rem;
+    height: 33px;
+    width: 33px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  .adminNav .adminNot i{
+    color: green;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .counter{
+    color: #1f8bc1;
+    background: linear-gradient(to bottom, #1f8bc1 49%, transparent 50%);
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    padding: 10px 7px 15px;
+    margin: 0 auto;
+    border: 15px solid #1f8bc1;
+    border-radius: 100% 100%;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3);
+}
+.counter .counter-value{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 0 5px;
+    border-radius: 5rem;
+    background-color: rgba(31, 139, 193,0.3);
+    box-shadow:0 8px 10px rgba(0, 0, 0, 0.3);
+}
+.counter h3 a{
+  color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 5rem;
+    background-color: rgba(31, 139, 193, 0.473);
+    box-shadow:0 8px 10px rgba(0, 0, 0, 0.3);
+}
+.counter.blue{
+  color: #1f8bc1;
+  background: linear-gradient(to bottom, rgba(0, 52, 78, 0.151)9%, #1f8bc1 50%);
+  border-color: #1f8bc1;
+}
+@media screen and (max-width:990px) {
+  .counter{ margin-bottom: 40px; }
+}

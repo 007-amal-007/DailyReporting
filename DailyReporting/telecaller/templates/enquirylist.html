@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%extends 'TeleHome.html'%}
+{%block body_block%}
+    
+    <table class="table table-bordered table-light text-primary">
+        <tr>
+            <th>Student name</th>
+            <th>Contct</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Status</th>
+            <th>user</th>
+            <th>Followup Date</th>
+            <th>action</th>
+        </tr>
+        {%for enquiry in enquires%}
+        <tr>
+            <td>{{enquiry.student_name}}</td>
+            <td>{{enquiry.contact}}</td>
+            <td>{{enquiry.email}}</td>
+            <td>{{enquiry.course}}</td>
+            {% if enquiry.status == "admitted" %}
+            <td><span class="badge bg-success">{{enquiry.status}}</span></td>
+            {% elif enquiry.status == "followup" %}
+            <td><span class="badge bg-warning">{{enquiry.status}}</span></td>
+            {% elif enquiry.status == "not-intrested" %}
+            <td><span class="badge bg-danger">{{enquiry.status}}</span></td>
+            {%endif%}
+            <td>{{enquiry.created_by}}</td>
+            <td>{{enquiry.followup_date}}</td>
+            <td>
+                <a href="{%url 'enquiryupdate' enquiry.id %}">Update</a>
+                <a href="{%url 'enquirydelete' enquiry.id %}">Delete</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'centerhead/adminhome.html' %}
+
+{%block body_block %}
+<div class="row pt-2">
+    <div class="col-md-2">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="Update" class="btn btn-primary btn-sm">
+        </form>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-bordered text-primary table-light">
+            <tr>
+                <th>Course name</th>
+            </tr>
+            <tr>
+                <td>{{course.course_name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{%endblock%}

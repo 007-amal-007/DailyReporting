@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'centerhead/adminhome.html' %}
+
+{% block body_block %}
+    <table>
+        <tr>
+            <th>Course name</th>
+            <th>Batch Name</th>
+        </tr>
+        <tr>
+            <td>{{batch.course.course_name}}</td>
+            <td>{{batch.batch_name}}</td>
+        </tr>
+    </table>
+{%endblock%}

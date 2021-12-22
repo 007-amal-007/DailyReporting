@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'TeleHome.html' %}
+{%block body_block %}
+<h1>total count{{reports}}</h1>
+{%if admissioncount%}
+<h1>admission count{{admissioncount}}</h1>
+{%endif%}
+{%if enquirycount%}
+<h1>enquiry count{{enquirycount}}</h1>
+{%endif%}
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Add">
+</form>
+{%endblock%}

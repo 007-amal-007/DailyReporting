@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'centerhead/adminhome.html' %}
+
+{% block body_block %}
+<div class="row">
+    <div class="col-md-4">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="Add Employee" class="btn btn-sm btn-primary">
+        </form>
+    </div>
+    <div class="col-md-8 p-2">
+        <table class="table table-bordered table-light bg-info">
+            <tr class="text-primary">
+                <th>employee_mail</th>
+                <th>Phone</th>
+                <th>Role</th>
+            </tr>
+            {%for employee in employees%}
+            <tr class="text-primary">
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.role}}</td>
+            </tr>
+            <tr>
+                <td><a href="{%url 'empremove' employee.id %}"><i class="bi bi-archive"></i></a></td>
+                <td><a href="{%url 'empupdate' employee.id %}"><i class="bi bi-pencil"></i></a></td>
+                <td><a href="{%url 'empdetail' employee.id %}"><i class="bi bi-box-seam"></i></a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</div>
+
+{% endblock %}
